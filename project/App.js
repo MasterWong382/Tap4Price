@@ -8,7 +8,14 @@
 
 import React from 'react';
 import type {Node} from 'react';
-import {Avatar, Button, Card, Title, Paragraph} from 'react-native-paper';
+import {
+  Avatar,
+  Button,
+  Card,
+  Title,
+  Paragraph,
+  DataTable,
+} from 'react-native-paper';
 
 import {
   SafeAreaView,
@@ -36,22 +43,17 @@ const App = () => {
   };
   const LeftContent = props => <Avatar.Icon {...props} icon="folder" />;
   return (
-    <Card>
-      <Card.Title
-        title="Card Title"
-        subtitle="Card Subtitle"
-        left={LeftContent}
-      />
-      <Card.Content>
-        <Title>Card title</Title>
-        <Paragraph>Card content</Paragraph>
-      </Card.Content>
-      <Card.Cover source={{uri: 'https://picsum.photos/700'}} />
-      <Card.Actions>
-        <Button>Cancel</Button>
-        <Button>Ok</Button>
-      </Card.Actions>
-    </Card>
+    <DataTable.Row>
+      <DataTable style={{width: 100, height: 300}}>
+        <Text>Noob</Text>
+        <Text>Noob</Text>
+        <Text>Noob</Text>
+        <Text>Noob</Text>
+      </DataTable>
+      <Text>Hello</Text>
+      <Text>Hello</Text>
+      <Text>Hello</Text>
+    </DataTable.Row>
   );
 };
 
